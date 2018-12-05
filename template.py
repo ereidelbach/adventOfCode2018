@@ -19,7 +19,6 @@ Created on Tue Dec  4 09:52:46 2018
 #==============================================================================
 # Package Import
 #==============================================================================
-import numpy as np
 import os
 import pandas as pd
 import pathlib
@@ -27,7 +26,7 @@ import pathlib
 #==============================================================================
 # Function Definitions / Reference Variable Declaration
 #==============================================================================
-def ingest_input(file_input):
+def ingestInput(file_input):
     '''
     Purpose: Ingest data given a specific filename or filepath
 
@@ -35,14 +34,19 @@ def ingest_input(file_input):
         (1) file_input (string): Filename of data for part 1 challenge
     
     Output: 
-        (1) NONE 
+        (1) The data for the day's challenge (input.txt) in the folder /XX/ 
+                where XX represents the day of the challenge (e.g. 05, 23)
     '''
     with open(file_input, 'r') as f:
         content = f.readlines()
+        
+    # Strip trailing new line from strings in the list
+    for item in content:
+        content[content.index(item)] = item.strip()
     
     return content
 
-def function_name(var1, var2, var3):
+def functionName(var1, var2, var3):
     '''
     Purpose: Stuff goes here
 
@@ -62,5 +66,8 @@ def function_name(var1, var2, var3):
 path_project = pathlib.Path('/home/ejreidelbach/Projects/adventOfCode2018')
 os.chdir(path_project)
 
-# Ingest the data
-list_claims = ingest_input(path_project.joinpath('Day4','input.txt'))
+# Set the day of the project
+day = '1'
+
+# Download and ingest the data for today's challenge
+data_raw =ingest_input(path_project.joinpath(day.zfill(2), 'input.txt'))
