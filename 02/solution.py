@@ -188,7 +188,7 @@ path_project = pathlib.Path('D:\Projects', 'adventOfCode2018')
 os.chdir(path_project)
 
 # Ingest the data
-df = ingest_input(path_project.joinpath('Day2','input.csv'))
+df = ingest_input(path_project.joinpath('02','input.csv'))
 
 # Create a list out of the box IDs
 list_boxIDs = list(df['ID'])

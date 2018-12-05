@@ -112,7 +112,7 @@ path_project = pathlib.Path('/home/ejreidelbach/Projects/adventOfCode2018')
 os.chdir(path_project)
 
 # Ingest the data
-data_raw = ingest_input(path_project.joinpath('Day4','input.txt'))
+data_raw = ingest_input(path_project.joinpath('05','input.txt'))
 
 #------------------------------------------------------------------------------
 # Part 1:  Find the guard that has the most minutes asleep.  

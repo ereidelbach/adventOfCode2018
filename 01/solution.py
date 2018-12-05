@@ -107,7 +107,7 @@ path_project = pathlib.Path('D:\Projects', 'adventOfCode2018')
 os.chdir(path_project)
 
 # Ingest the data
-df = ingest_input(path_project.joinpath('Day1','input.csv'))
+df = ingest_input(path_project.joinpath('01','input.csv'))
 
 # Convert to a list for easier iteration
 list_freq = list(df['change'])

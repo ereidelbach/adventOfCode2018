@@ -253,7 +253,7 @@ path_project = pathlib.Path('/home/ejreidelbach/Projects/adventOfCode2018')
 os.chdir(path_project)
 
 # Ingest the data
-list_claims = ingest_input(path_project.joinpath('Day3','input.txt'))
+list_claims = ingest_input(path_project.joinpath('03','input.txt'))
 
 #------------------------------------------------------------------------------
 # Day 3, Part 1
