@@ -70,4 +70,12 @@ os.chdir(path_project)
 day = '1'
 
 # Download and ingest the data for today's challenge
-data_raw =ingest_input(path_project.joinpath(day.zfill(2), 'input.txt'))
+data_raw = ingestInput(path_project.joinpath(day.zfill(2), 'input.txt'))
+
+#------------------------------------------------------------------------------
+# Part 1.  What is the sum of all metadata entries?
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+# Part 2.
+#------------------------------------------------------------------------------
